@@ -9,6 +9,7 @@
 \alias{catlg128.21}
 \alias{catlg128.22}
 \alias{catlg128.23}
+\alias{catlg128.24}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{ Catalogues of regular 128 run designs of various factor numbers}
 \description{
@@ -23,6 +24,7 @@ data(catlg128.20)
 data(catlg128.21)
 data(catlg128.22)
 data(catlg128.23)
+data(catlg128.24)
 }
 %- maybe also 'usage' for other objects documented here.
 \details{
@@ -42,7 +44,7 @@ data(catlg128.23)
   when used with its option \code{estimable}.
   
   Note that the catalogues for larger numbers of factors are very large.
-  For the 24 factor catalogue (not on CRAN), R has even crashed without 
+  For the 24 factor catalogue, R has even crashed without 
   obvious reason, if \code{catlg128.24} was in the workspace. Thus, 
   it may be advisable to remove the larger catalogues from the workspace 
   immediately after their purpose has been fulfilled (cf. also example below).

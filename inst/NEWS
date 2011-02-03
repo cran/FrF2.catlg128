@@ -1,5 +1,10 @@
 Changes to package FrF2.catlg128
 
+Version 1.0-1, 03/02/2011
+    removed zipdata = yes, 
+    modified rda files to smaller sizes with tools::resaveRdaFiles
+    and added the file for 24 factors to the package
+
 First version on CRAN: 
     Version 1.0, 23/04/2010
 
