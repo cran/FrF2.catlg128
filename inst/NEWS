@@ -1,5 +1,8 @@
 Changes to package FrF2.catlg128
 
+Version 1.0-2, 04/02/2011
+    eliminated .Random.seed and .required from each of the rda files
+
 Version 1.0-1, 03/02/2011
     removed zipdata = yes, 
     modified rda files to smaller sizes with tools::resaveRdaFiles
