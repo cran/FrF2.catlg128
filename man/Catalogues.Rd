@@ -31,25 +31,35 @@ data(catlg128.24)
   The files contain catalogues for regular fractional factorial designs in 128 runs; 
   the numbers after the period indicate the number(s) of factors covered by the 
   respective catalogue. All the catalogues are lists of class \code{\link[FrF2]{catlg}}. 
-  They are provided in support of package \pkg{\link{FrF2}}. \cr
+  They are provided in support of package \pkg{\link[FrF2:FrF2-package]{FrF2}}. \cr
   
-  Their main intention is to provide a complete catalogue of resolution IV 
-  designs in 128 runs for usage in automatic search of clear designs. 
-  The catalogues come from Xu (2009; supplement on his website) 
+  Their main intention is to support automatic search of clear designs with 
+  options \code{estimable} and \code{clear=TRUE} in function \code{\link{FrF2}}. 
+  For this purpose, in principle, a complete catalogue of resolution IV designs in 128 runs 
+  would be needed. The catalogues come from Xu (2009; supplement on his website) 
   and have been enriched by information on clear interactions 
   (entry \code{clear.2fis} for each element). 
+  
+  Wu, Mee and Tang (2012) proved that one need not consider designs with 
+  no 5-letter words, as they are always dominated by a better design that can 
+  clearly accomodate the same tow-factor interactions. Therefore, as of version 1.1 
+  of this package, the resolution IV designs in the catalogues have been reduced to 
+  those that do have 5-letter words. The previous complete catalogues of designs 
+  can be downloaded from the author's website.
+
   If one of these catalogues is used in the \code{select.catlg} option of 
   function \code{\link[FrF2]{FrF2}}, the function is guaranteed to find the 
   best clear design in 128 runs for the requested number of factors, 
   when used with its option \code{estimable}.
   
-  Note that the catalogues for larger numbers of factors are very large.
-  For the 24 factor catalogue, R has even crashed without 
-  obvious reason, if \code{catlg128.24} was in the workspace. Thus, 
-  it may be advisable to remove the larger catalogues from the workspace 
+  Note that the catalogues for larger numbers of factors are quite large 
+  (though no longer nearly as large than before version 1.1).
+  Thus, it may be advisable to remove the larger catalogues from the workspace 
   immediately after their purpose has been fulfilled (cf. also example below).
 }
 \references{ 
+Wu, H., Mee, R. and Tang, B. (2012) Fractional Factorial Designs With Admissible Sets of
+         Clear Two-Factor Interactions. \emph{Technometrics} \bold{54}, 191-197.
 Xu, H. (2009) Algorithmic Construction of Efficient Fractional Factorial Designs 
          With Large Run Sizes. \emph{Technometrics} \bold{51}, 262-277.
 }

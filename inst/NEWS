@@ -1,5 +1,15 @@
 Changes to package FrF2.catlg128
 
+Version 1.1, 29/06/2012
+    considerably reduced the number of designs included:
+    excluded all even resolution IV designs (i.e. all those 
+    without odd words, picked based on those without words of 
+    length 5)
+
+Version 1.0-3, 29/06/2012
+    added a namespace (never went to CRAN, 
+    was created for download from homepage)
+
 Version 1.0-2, 04/02/2011
     eliminated .Random.seed and .required from each of the rda files
 
