@@ -1,5 +1,21 @@
 Changes to package FrF2.catlg128
 
+Version 1.2, 18/04/2013
+    added designs from 25 to 33 factors (only the even/odd designs, 
+    i.e. omitting those without odd words)
+    
+    The catalogues are now lazy-loaded and provided in one 
+    sysdata.rda file in the R directory, 
+    rather than as separate data files in the data directory. 
+    Thus, the install size of the package has been vastly reduced.
+    As a consequence, the data() command for loading the catalogues
+    is no longer needed and does even yield an error message.
+
+    Removed file LICENSE in order to get rid of R CMD check note.
+
+    Updated maintainer e-mail address
+    
+
 Version 1.1, 29/06/2012
     considerably reduced the number of designs included:
     excluded all even resolution IV designs (i.e. all those 
