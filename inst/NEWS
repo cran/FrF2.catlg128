@@ -1,5 +1,9 @@
 Changes to package FrF2.catlg128
 
+Version 1.2-1, 19/04/2013
+    made the dominating element of the catalogues informative, 
+    instead of including the element "TRUE" for all designs 
+
 Version 1.2, 18/04/2013
     added designs from 25 to 33 factors (only the even/odd designs, 
     i.e. omitting those without odd words)

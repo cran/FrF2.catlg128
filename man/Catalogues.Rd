@@ -49,7 +49,10 @@ catlg128.26to33
   no 5-letter words, as they are always dominated by a better design that can 
   clearly accomodate the same two-factor interactions. Therefore, as of version 1.1 
   of this package, the resolution IV designs in the catalogues have been reduced to 
-  those that do have 5-letter words. The previous complete catalogues of designs 
+  those that do have 5-letter words. For the search for clear designs, it even suffices 
+  to search dominating designs only. These are identified by the dominating element 
+  of each catalogue entry. 
+  The previous complete catalogues of designs 
   can be downloaded from the author's website. Catalogues 
   for 25 to 33 factors have been made available with version 1.2 of the package. 
 

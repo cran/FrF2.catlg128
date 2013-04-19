@@ -1,9 +1,9 @@
 Package: FrF2.catlg128
 Title: Catalogues of resolution IV 128 run 2-level fractional
         factorials up to 33 factors that do have 5-letter words
-Version: 1.2
+Version: 1.2-1
 Depends: R(>= 2.13.0), FrF2(>= 1.4)
-Date: 2013-04-18
+Date: 2013-04-19
 Author: Ulrike Groemping
 Maintainer: Ulrike Groemping <groemping@beuth-hochschule.de>
 Description: This package provides catalogues of resolution IV regular
@@ -20,7 +20,7 @@ LazyData: yes
 Encoding: latin1
 URL: http://prof.beuth-hochschule.de/groemping/DoE/,
         http://prof.beuth-hochschule.de/groemping/
-Packaged: 2013-04-18 18:12:17 UTC; groemping
+Packaged: 2013-04-19 14:41:48 UTC; groemping
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2013-04-19 07:57:33
+Date/Publication: 2013-04-19 17:27:03
