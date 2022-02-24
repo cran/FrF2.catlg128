@@ -13,3 +13,11 @@ export(
 "catlg128.25",
 "catlg128.26to33"
 )
+
+## import catalogue related functionality from FrF2
+## S3 methods for generics from package base do not need to be imported,
+##    because the package depends on FrF2
+importFrom(FrF2, "nruns", "nfac", "nclear.2fis",
+            "clear.2fis","all.2fis.clear.catlg",
+            "res","WLP","dominating",
+            "CIG","CIGstatic","catlg","Yates", "gen2CIG")

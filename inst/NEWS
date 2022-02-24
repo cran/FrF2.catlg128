@@ -1,5 +1,19 @@
 Changes to package FrF2.catlg128
 
+Version 1.2-2, 23/02/2022
+    added a paragraph and an example to the documentation in order to reflect 
+    use of the catalogues for the recently implemented blocking functionality of package FrF2
+
+    updated website and mail address information
+    
+    modified DESCRIPTION to comply with current requirements (removed the lazyData flag, 
+    changed title to title case, changed start of first senctence of description) and 
+    added the word "unblocked" to the "not needed" statement
+
+    removed non-standard file from top level directory
+
+    imported relevant functions from package FrF2 in NAMESPACE
+
 Version 1.2-1, 19/04/2013
     made the dominating element of the catalogues informative, 
     instead of including the element "TRUE" for all designs 

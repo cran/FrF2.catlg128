@@ -36,7 +36,7 @@ Designs for 25 to 33 factors have been added with version 1.2 of the package.
 \author{
 Ulrike Groemping
 
-Maintainer: Ulrike Groemping <groemping@bht-berlin.de>
+Maintainer: Ulrike Groemping <ulrike.groemping@bht-berlin.de>
 }
 \references{
    Mee, R. (2012) \emph{Personal communication}.

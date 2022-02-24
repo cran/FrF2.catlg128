@@ -37,7 +37,7 @@ catlg128.26to33
   respective catalogue. All the catalogues are lists of class \code{\link[FrF2]{catlg}}. 
   They are provided in support of package \pkg{\link[FrF2:FrF2-package]{FrF2}}. \cr
   
-  Their main intention is to support automatic search of clear designs with 
+  Originally, their main intention was to support automatic search of clear designs with 
   options \code{estimable} and \code{clear=TRUE} in function \code{\link{FrF2}}. 
   For this purpose, in principle, a complete catalogue of resolution IV designs in 128 runs 
   would be needed. The catalogues come from Xu (2009; supplement on his website up to 25 factors) 
@@ -45,6 +45,17 @@ catlg128.26to33
   and have been enriched by information on clear interactions 
   (entry \code{clear.2fis} for each element). 
   
+  Since version 2 of package \pkg{FrF2}, the catalogues can also support 
+  blocking of designs by the method proposed by Godolphin (2020), 
+  automated as described in Groemping (2021); with this method, blocking can (but need not) 
+  be combined with requiring specific 2fis to be clear. 
+  A few catalogue elements that are useful for that method have been added to 
+  the catalogue \code{catlg} in package \pkg{FrF2}. If a desired blocked design cannot 
+  be obtained in adequate quality by using entries from \code{catlg} or from the suitable 
+  catalogue from this package, one may have to resort to the larger catalogues that 
+  are available from the author's website (see also next paragraph).
+  
+  For the search of clear designs, 
   Wu, Mee and Tang (2012) proved that one need not consider designs with 
   no 5-letter words, as they are always dominated by a better design that can 
   clearly accomodate the same two-factor interactions. Therefore, as of version 1.1 
@@ -63,10 +74,14 @@ catlg128.26to33
   
   For earlier versions of the package, the catalogues had to be loaded with 
   a \code{data()} command. This is no longer required, and not even supported; 
-  the catalogues are now lazy loaded, i.e. they will be automatically loaded 
-  on first use.
+  the catalogues will now be automatically loaded on first use.
 }
 \references{ 
+Godolphin, J. (2020). Construction of Blocked Factorial Designs to Estimate 
+   Main Effects and Selected Two-Factor Interactions. \emph{J. Roy. Statist. Soc.} B \bold{83}, 
+   5-29.
+Groemping, U. (2021). An algorithm for blocking regular fractional factorial 2-level 
+   designs with clear two-factor interactions. \emph{Computational Statistics & Data Analysis} \bold{153}, 1-18.
 Mee, R. (2012) Catalogues of even/odd designs produced by Robert Block. 
         \emph{Personal communication}.
 Wu, H., Mee, R. and Tang, B. (2012) Fractional Factorial Designs With Admissible Sets of
@@ -80,16 +95,33 @@ Xu, H. (2009) Algorithmic Construction of Efficient Fractional Factorial Designs
 \examples{
 catlg128.8to15[1:5]
 
+\donttest{
 ## example of using a catalogue from this package with function FrF2
+## for keeping interactions clear
 ## the design in the example will also be found with the default catalogue
     ## because arrays for all compromise plans with up to 24 factors 
     ## have been added to catlg with FrF2 version 1.1-1
-## from package FrF2 1.6-5 onwards, package FrF2.catlg128 need not be loaded 
-## for the code below to work
-\dontrun{
 plan <- FrF2(128, 23, estimable=compromise(23,1:2)$requirement, select.catlg=catlg128.23)
 summary(plan)
 length(catlg128.23)
+
+## example of using a catalogue from this package with function FrF2
+## for blocking a design
+requirement <- compromise(13,1)$requirement
+## loop through designs from catlg 
+nn1 <- names(catlg128.8to15[nruns(catlg128.8to15)==128 & nfac(catlg128.8to15)==13])
+for (nam in nn1){
+  suppressMessages(
+    des128fromcatlg <- try(
+         FrF2(design=nam, blocks=32,
+            factor.names=Letters[15:27], estimable=requirement, 
+            alias.block.2fis = TRUE, select.catlg=catlg128.8to15), 
+        silent=TRUE)
+    )
+  ## stop at first success
+  if (!"try-error" \%in\% class(des128fromcatlg)) break
+}
+summary(des128fromcatlg)
 }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
