@@ -1,5 +1,8 @@
 Changes to package FrF2.catlg128
 
+Version 1.2-2, 04/10/2023
+    removed non-ASCII characters and latin1 encoding
+
 Version 1.2-2, 23/02/2022
     added a paragraph and an example to the documentation in order to reflect 
     use of the catalogues for the recently implemented blocking functionality of package FrF2
