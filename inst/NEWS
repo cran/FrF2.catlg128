@@ -1,6 +1,10 @@
 Changes to package FrF2.catlg128
 
-Version 1.2-2, 04/10/2023
+Version 1.2-4, 03/09/2025
+    added authors@R field
+    added package anchor to package FrF2 reference
+
+Version 1.2-3, 04/10/2023
     removed non-ASCII characters and latin1 encoding
 
 Version 1.2-2, 23/02/2022

@@ -1,10 +1,11 @@
 Package: FrF2.catlg128
 Title: Catalogues of Resolution IV 128 Run 2-Level Fractional
         Factorials Up to 33 Factors that Do Have 5-Letter Words
-Version: 1.2-3
+Version: 1.2-4
 Depends: R(>= 2.13.0), FrF2(>= 1.4)
-Date: 2023-10-04
-Author: Ulrike Groemping
+Date: 2025-09-03
+Authors@R: person(given="Ulrike", family= "Groemping",
+           role=c("aut","cre"), email="ulrike.groemping@bht-berlin.de")
 Maintainer: Ulrike Groemping <ulrike.groemping@bht-berlin.de>
 Description: Catalogues of resolution IV regular
         fractional factorial designs in 128 runs are provided 
@@ -21,5 +22,6 @@ URL: https://prof.bht-berlin.de/groemping/DoE/,
         https://prof.bht-berlin.de/groemping/
 NeedsCompilation: no
 Repository: CRAN
-Packaged: 2023-10-07 06:54:38 UTC; groemping
-Date/Publication: 2023-10-07 07:50:02 UTC
+Packaged: 2025-09-03 11:32:56 UTC; groemping
+Author: Ulrike Groemping [aut, cre]
+Date/Publication: 2025-09-03 12:20:02 UTC
